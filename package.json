@@ -1,0 +1,39 @@
+{
+  "name": "@treblefm/babel-node",
+  "version": "0.1.0",
+  "description": "A better babel-node",
+  "engines": {
+    "node": ">=4"
+  },
+  "bin": {
+    "babel-node": "./bin/babel-node"
+  },
+  "scripts": {
+    "test": "./bin/babel-node tests/test.js oh \"hello world\"",
+    "lint": "eslint '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-preset-env": "0.0.7",
+    "babel-register": "^6.18.0",
+    "core-js": "^2.4.1",
+    "kexec": "^3.0.0",
+    "v8flags": "^2.0.11"
+  },
+  "devDependencies": {
+    "@treblefm/eslint-config": "^1.0.4",
+    "babel-eslint": "^7.1.0",
+    "eslint": "^3.9.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-node": "^3.0.3"
+  }
+}
