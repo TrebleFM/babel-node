@@ -2,23 +2,24 @@
 
 /**
 * This tiny wrapper file checks for known node flags and appends them
-* when found, before invoking the "real" _babel-node(1) executable.
+* when found, before invoking the "real" babel-node(1) executable.
 */
+
+"use strict";
 
 const getV8Flags = require("v8flags");
 const path = require("path");
 const kexec = require("kexec");
 
 let args = [path.join(__dirname, "../lib/loader")];
-
 let babelArgs = process.argv.slice(2);
-let userArgs;
+let userArgs = [];
 
 // separate node arguments from script arguments
-let argSeparator = babelArgs.indexOf("--");
-if (argSeparator > -1) {
-    userArgs = babelArgs.slice(argSeparator); // including the  --
-    babelArgs = babelArgs.slice(0, argSeparator);
+let argSeparatorIndex = babelArgs.indexOf("--");
+if (argSeparatorIndex > -1) {
+    userArgs = babelArgs.slice(argSeparatorIndex); // including the  --
+    babelArgs = babelArgs.slice(0, argSeparatorIndex);
 }
 
 /**
@@ -41,7 +42,7 @@ getV8Flags((err, v8Flags) => {
         throw err;
     }
 
-    babelArgs.forEach((arg) => {
+    for (let arg of babelArgs) {
         const flag = arg.split("=")[0];
 
         switch (flag) {
@@ -72,12 +73,13 @@ getV8Flags((err, v8Flags) => {
                 }
                 break;
         }
-    });
+    }
 
     // append arguments passed after --
-    if (argSeparator > -1) {
+    if (argSeparatorIndex > -1) {
         args = args.concat(userArgs);
     }
 
+    // doesn't work on Windows, but ¯\_(ツ)_/¯
     kexec(process.argv[0], args);
 });
