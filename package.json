@@ -1,6 +1,6 @@
 {
   "name": "@treblefm/babel-node",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A better babel-node",
   "engines": {
     "node": ">=4"
