@@ -18,22 +18,23 @@
   },
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.18.2",
+    "babel-core": "^6.21.0",
     "babel-plugin-external-helpers": "^6.18.0",
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
-    "babel-plugin-transform-flow-strip-types": "^6.18.0",
-    "babel-preset-env": "0.0.7",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-env": "^1.1.4",
     "babel-register": "^6.18.0",
     "core-js": "^2.4.1",
     "kexec": "^3.0.0",
     "v8flags": "^2.0.11"
   },
   "devDependencies": {
-    "@treblefm/eslint-config": "^1.0.4",
-    "babel-eslint": "^7.1.0",
-    "eslint": "^3.9.1",
-    "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-node": "^3.0.3"
+    "@treblefm/eslint-config": "^1.4.0",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.12.2",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "eslint-plugin-node": "^3.0.5"
   }
 }
