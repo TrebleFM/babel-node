@@ -1,14 +1,19 @@
 # @treblefm/babel-node
-A better babel-node
+A better [`babel-node`](https://babeljs.io/docs/usage/cli/#babel-node), meant for production use.
+
+Uses [`babel-preset-env`](https://github.com/babel/babel-preset-env) to automatically select the minimum amount of
+plugins, transforms, and polyfills (Stage 3 or better) required for your version of Node.js (>= 4). Also includes
+[`flow`](https://flowtype.org/) support; remember, kids, use protection and be type-safe.
 
 ### Install
-```
-$ npm install @treblefm/babel-node
+```sh
+npm install @treblefm/babel-node
 ```
 
 ### Usage
-Instead of calling `node` in your `npm start` script (or wherever), call `babel-node`. Uses `babel-preset-env` to
-automatically select the minimum amount of transforms required for your version of Node.js; polyfills are also
-dynamically selected (includes Stage 3 features or better). Also includes `flow` support.
+Instead of calling `node` in your `npm start` script (or wherever), call `babel-node`.
 
-Does not include REPL support. Conflicts with `babel-node` provided by `babel-cli`.
+### Warnings
+- Does **not** include REPL support
+- Conflicts with `babel-node` provided by `babel-cli`
+
