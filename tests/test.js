@@ -4,7 +4,11 @@
  * Empty .babelrc makes sure configs are merged, not overwritten
  */
 
-import "module";
+import assert from "assert";
 
-console.log("process.argv =", process.argv);
-console.log("module =", module);
+assert.strictEqual(process.argv[2], "oh");
+assert.strictEqual(process.argv[3], "hello world");
+assert.strictEqual(module.id, ".");
+assert.strictEqual(module.parent, null);
+
+console.log("***TESTS PASSED***");
