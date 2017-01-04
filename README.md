@@ -17,3 +17,15 @@ Instead of calling `node` in your `npm start` script (or wherever), call `babel-
 - Does **not** include REPL support
 - Conflicts with `babel-node` provided by `babel-cli`
 
+### Notes
+If you're also using [`@treblefm/eslint-config`](https://github.com/treblefm/eslint-config), you'll want to disable the
+`node/no-unsupported-features` rule:
+
+```json
+{
+    "extends": "@treblefm",
+    "rules": {
+        "node/no-unsupported-features": 0
+    }
+}
+```

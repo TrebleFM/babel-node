@@ -1,0 +1,6 @@
+{
+    "extends": "../.eslintrc.json",
+    "rules": {
+        "node/no-unsupported-features": 0
+    }
+}
