@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* Based on https://github.com/babel/babel/blob/master/packages/babel-cli/src/babel-node.js */
 
 /**

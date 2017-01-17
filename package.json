@@ -6,7 +6,7 @@
     "node": ">=4"
   },
   "bin": {
-    "babel-node": "./bin/babel-node"
+    "babel-node": "./bin/babel-node.js"
   },
   "scripts": {
     "test": "./bin/babel-node tests/test.js oh \"hello world\"",
