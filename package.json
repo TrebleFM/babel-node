@@ -25,6 +25,7 @@
     "babel-polyfill": "^6.20.0",
     "babel-preset-env": "^1.1.8",
     "babel-register": "^6.18.0",
+    "bluebird": "^3.4.7",
     "core-js": "^2.4.1",
     "kexec": "^3.0.0",
     "v8flags": "^2.0.11"
